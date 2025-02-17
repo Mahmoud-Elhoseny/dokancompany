@@ -8,19 +8,24 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm border-b border-[#D9DEDD] z-50">
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-16">
-        <div className="flex justify-between h-16 items-center">
+    <nav
+      className="bg-white font-figtree font-medium
+ shadow-sm border-b border-[#D9DEDD] z-50 h-[96px] flex items-center"
+    >
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-16 w-full">
+        <div className="flex justify-between items-center">
           {/* Logo and Brand Name */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
               <Image src={logo} alt="Logo" width={32} height={32} />
-              <span className="ml-2 text-xl font-bold text-black">TEST</span>
+              <span className="ml-2 text-xl text-black text-[24px] leading-[24px]">
+                TEST
+              </span>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-700 hover:text-gray-900 p-2"
@@ -52,28 +57,28 @@ const Navbar = () => {
 
           {/* Centered Navigation Links */}
           <div className="hidden md:flex items-center justify-center flex-1">
-            <div className="flex space-x-8">
+            <div className="flex gap-[32px]">
               <Link
                 href="/about-us"
-                className="text-[#022C22] hover:text-gray-900 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#0719B3] after:transition-all after:duration-300"
+                className="text-[#022C22] text-[16px] leading-[24px] hover:text-gray-900 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#0719B3] after:transition-all after:duration-300"
               >
                 About us
               </Link>
               <Link
                 href="/team"
-                className="text-[#022C22] hover:text-gray-900 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#0719B3] after:transition-all after:duration-300"
+                className="text-[#022C22] text-[16px] leading-[24px] hover:text-gray-900 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#0719B3] after:transition-all after:duration-300"
               >
                 Team
               </Link>
               <Link
                 href="/solutions"
-                className="text-[#022C22] hover:text-gray-900 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#0719B3] after:transition-all after:duration-300"
+                className="text-[#022C22] text-[16px] leading-[24px] hover:text-gray-900 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#0719B3] after:transition-all after:duration-300"
               >
                 Solutions
               </Link>
               <Link
                 href="/blog"
-                className="text-[#022C22] hover:text-gray-900 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#0719B3] after:transition-all after:duration-300"
+                className="text-[#022C22] text-[16px] leading-[24px] hover:text-gray-900 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#0719B3] after:transition-all after:duration-300"
               >
                 Blog
               </Link>
@@ -81,10 +86,10 @@ const Navbar = () => {
           </div>
 
           {/* Dashboard Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:block flex items-center">
             <Link
               href="/dashboard"
-              className="bg-transparent text-black border rounded-full border-[#0719B3] px-4 py-2 hover:bg-blue-700 hover:text-white flex items-center group"
+              className="bg-transparent text-black border rounded-[200px] border-[#0719B3] px-4 py-2 hover:bg-blue-700 hover:text-white flex items-center group"
             >
               Dashboard
               <svg
@@ -107,7 +112,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-2">
+          <div className="md:hidden py-4 space-y-2 absolute top-[96px] left-0 w-full bg-white shadow-lg">
             <Link
               href="/about-us"
               className="block px-4 py-2 text-[#022C22] hover:bg-gray-100 relative overflow-hidden after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#0719B3] after:transition-all after:duration-300"
@@ -134,7 +139,7 @@ const Navbar = () => {
             </Link>
             <Link
               href="/dashboard"
-              className="block px-4 py-2 text-[#022C22] hover:bg-gray-100  items-center group"
+              className="block px-4 py-2 text-[#022C22] text-[16px] leading-[24px] hover:bg-gray-100  items-center group"
             >
               Dashboard
               <svg

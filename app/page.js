@@ -15,7 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center px-4 py-12 bg-[#FFFFFF]">
+    <div className="flex items-center justify-center px-4 py-4 bg-[#FFFFFF]">
       <div
         ref={mainDivRef}
         className="w-full max-w-md space-y-8"

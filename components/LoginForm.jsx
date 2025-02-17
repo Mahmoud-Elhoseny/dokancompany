@@ -1,6 +1,5 @@
 'use client';
-import { animate } from 'motion';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -15,7 +14,6 @@ const loginSchema = z.object({
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const formRef = useRef(null);
 
   const {
     register,
@@ -27,12 +25,8 @@ const LoginForm = () => {
 
   const onSubmit = (data) => {
     setShowSuccess(true);
-    setTimeout(() => setShowSuccess(false), 3000); 
+    setTimeout(() => setShowSuccess(false), 3000);
   };
-
-  useEffect(() => {
-    animate(formRef.current, { y: [20, 0] }, { duration: 0.5 });
-  }, []);
 
   return (
     <div className="relative min-h-screen w-full bg-white">
@@ -62,60 +56,52 @@ const LoginForm = () => {
         </div>
       </div>
 
-      <div className="w-full max-w-md space-y-8 bg-white p-6 relative z-10">
+      <div className="w-full max-w-md space-y-10 bg-white p-6 relative z-10">
         <div className="text-center">
-          <h2 className="text-4xl font-semibold text-gray-900">Sign In</h2>
-          <p className="mt-2 text-gray-600">Access our services in one click</p>
+          <h2 className="text-4xl font-medium  text-gray-900 text-[62px] leading-[68px] font-figtree">
+            Sign In
+          </h2>
+          <p className="mt-7 text-[#646A69] font-figtree font-normal">
+            Access our services in one click
+          </p>
         </div>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit(onSubmit)}
-          className="mt-8 space-y-6"
-        >
-          <div className="space-y-10">
-            <div className="relative">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+          <div className="space-y-7">
+            <div className="flex flex-col gap-2">
+              <label
+                htmlFor="email"
+                className="text-[18px] font-figtree font-normal text-[#383838]"
+              >
+                Email
+              </label>
               <input
                 {...register('email')}
                 type="email"
                 id="email"
-                className="peer mt-1 block w-full text-black rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-transparent"
-                placeholder="Email"
+                className="block w-full text-black rounded-md border border-gray-300 px-3 py-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder:text-[#C2C2C2] placeholder:font-normal placeholder:font-figtree"
+                placeholder="Enter Your Email"
               />
-              <label
-                htmlFor="email"
-                className="absolute left-3 -top-6 text-sm text-gray-700 transition-all 
-                peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 
-                peer-placeholder-shown:top-2 peer-focus:-top-6 peer-focus:text-sm 
-                peer-focus:text-gray-700"
-              >
-                Email
-              </label>
               {errors.email && (
-                <p className="mt-1 text-sm text-red-600">
-                  {errors.email.message}
-                </p>
+                <p className="text-sm text-red-600">{errors.email.message}</p>
               )}
             </div>
 
-            <div className="relative min-h-[70px]">
+            <div className="flex flex-col gap-2">
+              <label
+                htmlFor="password"
+                className="text-[18px] font-figtree font-normal text-[#383838]"
+              >
+                Password
+              </label>
               <div className="relative">
                 <input
                   {...register('password')}
                   type={showPassword ? 'text' : 'password'}
                   id="password"
-                  className="peer mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 text-black placeholder-transparent"
-                  placeholder="Password"
+                  className="block w-full rounded-md border border-gray-300 px-3 py-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 text-black placeholder:text-[#C2C2C2] placeholder:font-normal placeholder:font-figtree"
+                  placeholder="Enter Your Password"
                 />
-                <label
-                  htmlFor="password"
-                  className="absolute left-3 -top-6 text-sm text-gray-700 transition-all 
-                peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 
-                peer-placeholder-shown:top-2 peer-focus:-top-6 peer-focus:text-sm 
-                peer-focus:text-gray-700"
-                >
-                  Password
-                </label>
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
@@ -159,9 +145,8 @@ const LoginForm = () => {
                   )}
                 </button>
               </div>
-
               {errors.password && (
-                <p className="mt-1 text-sm text-red-600">
+                <p className="text-sm text-red-600">
                   {errors.password.message}
                 </p>
               )}
@@ -170,24 +155,21 @@ const LoginForm = () => {
 
           <button
             type="submit"
-            className="w-full rounded-md bg-[#1a237e] py-3 text-white hover:bg-[#1a237e]/90 focus:outline-none focus:ring-2 focus:ring-[#1a237e] focus:ring-offset-2 transition-colors"
+            className="w-full text-[18px] rounded-md bg-[#030B53] font-figtree font-normal px-[40px] py-[16px] text-white hover:bg-[#1a237e]/90 focus:outline-none focus:ring-2 focus:ring-[#1a237e] focus:ring-offset-2 transition-colors"
           >
             Login
           </button>
 
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-gray-300" />
-            </div>
-            <div className="relative flex justify-center text-sm">
-              <span className="bg-white px-4 text-gray-500">or</span>
-            </div>
+            <div className="relative flex justify-center -">
+              <span className="bg-white  text-[#383838] font-sans text-[18px] font-medium">
+                or
+              </span>
           </div>
 
           <button
             type="button"
             onClick={() => signIn('google')}
-            className="w-full flex items-center justify-center gap-3 rounded-md border border-gray-300 bg-white py-3 text-gray-700 hover:bg-gray-50 transition-colors"
+            className="w-full font-sans text-[18px] font-medium flex items-center justify-center gap-3 rounded-md border-[1.5px] border-[#EFEFEF] shadow-sm bg-white py-3 text-[#242424] hover:bg-gray-50 transition-colors"
           >
             <svg
               viewBox="0 0 24 24"
@@ -214,7 +196,7 @@ const LoginForm = () => {
             Continue with Google
           </button>
 
-          <p className="text-center text-sm text-[#242424]">
+          <p className="text-center font-sans font-medium text-[16px] text-sm text-[#242424]">
             Did'nt have an account?{' '}
             <Link
               href="/register"

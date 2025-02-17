@@ -1,4 +1,4 @@
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Plus_Jakarta_Sans, Figtree } from 'next/font/google';
 import './globals.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -6,6 +6,11 @@ import Footer from '../components/Footer';
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-plus-jakarta',
+});
+
+const figtree = Figtree({
+  subsets: ['latin'],
+  variable: '--font-figtree',
 });
 
 export const metadata = {
@@ -28,7 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${plusJakartaSans.variable} font-sans antialiased min-h-screen flex flex-col`}
+        className={`${plusJakartaSans.variable} ${figtree.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
         <Navbar />
         <main className="flex-grow">{children}</main>
