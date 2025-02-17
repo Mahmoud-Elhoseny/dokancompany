@@ -139,11 +139,11 @@ const Navbar = () => {
             </Link>
             <Link
               href="/dashboard"
-              className="block px-4 py-2 text-[#022C22] text-[16px] leading-[24px] hover:bg-gray-100  items-center group"
+              className="block px-4 py-2 text-[#022C22] text-[16px] leading-[24px] hover:bg-gray-100 flex items-center group"
             >
               Dashboard
               <svg
-                className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                className="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1 inline-block"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

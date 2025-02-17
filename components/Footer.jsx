@@ -206,7 +206,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 sm:mt-10 md:mt-12 pt-6 border-t border-gray-800 text-[#606060]">
+        <div className="mt-8 sm:mt-10 md:mt-12 pt-6   text-[#606060]">
           <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-4">
             <p className="text-center sm:text-left font-normal text-[14px] sm:text-[16px] leading-[20px]">
               © 2025 Dokan Inc. All rights reserved.
