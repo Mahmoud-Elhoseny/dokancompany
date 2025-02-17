@@ -12,13 +12,15 @@ export const metadata = {
   title: 'Dokan - Sign In',
   description: 'Access your Dokan account',
   icons: {
-    icon: '/Logo.png',
+    icon: [{ url: '/Logo.png', type: 'image/png' }],
     shortcut: '/Logo.png',
-    apple: '/Logo.png',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/Logo.png',
-    },
+    apple: [{ url: '/Logo.png', sizes: '180x180', type: 'image/png' }],
+    other: [
+      {
+        rel: 'apple-touch-icon',
+        url: '/Logo.png',
+      },
+    ],
   },
 };
 
