@@ -86,10 +86,10 @@ const Navbar = () => {
           </div>
 
           {/* Dashboard Button */}
-          <div className="hidden md:block flex items-center">
+          <div className="hidden md:block  items-center">
             <Link
               href="/dashboard"
-              className="bg-transparent text-black border rounded-[200px] border-[#0719B3] px-4 py-2 hover:bg-blue-700 hover:text-white flex items-center group"
+              className="bg-transparent text-black border rounded-[200px] border-[#0719B3] px-4 py-2 hover:bg-[#030B53] hover:text-white flex items-center group"
             >
               Dashboard
               <svg
@@ -139,7 +139,7 @@ const Navbar = () => {
             </Link>
             <Link
               href="/dashboard"
-              className="block px-4 py-2 text-[#022C22] text-[16px] leading-[24px] hover:bg-gray-100 flex items-center group"
+              className=" px-4 py-2 text-[#022C22] text-[16px] leading-[24px] hover:bg-gray-100 flex items-center group"
             >
               Dashboard
               <svg

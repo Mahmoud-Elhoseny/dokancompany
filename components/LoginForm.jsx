@@ -29,7 +29,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-white">
+    <div className="relative pb-10 w-full bg-white">
       {/* Success Notification */}
       <div
         className={`fixed top-4  transform transition-transform duration-300 ease-in-out z-50 
@@ -79,7 +79,7 @@ const LoginForm = () => {
                 {...register('email')}
                 type="email"
                 id="email"
-                className="block w-full text-black rounded-md border border-gray-300 px-3 py-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder:text-[#C2C2C2] placeholder:font-normal placeholder:font-figtree"
+                className="block w-full text-black rounded-[10px] border border-gray-300 px-3 py-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder:text-[#C2C2C2] placeholder:font-normal placeholder:font-figtree"
                 placeholder="Enter Your Email"
               />
               {errors.email && (
@@ -99,7 +99,7 @@ const LoginForm = () => {
                   {...register('password')}
                   type={showPassword ? 'text' : 'password'}
                   id="password"
-                  className="block w-full rounded-md border border-gray-300 px-3 py-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 text-black placeholder:text-[#C2C2C2] placeholder:font-normal placeholder:font-figtree"
+                  className="block w-full rounded-[10px] border border-gray-300 px-3 py-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 text-black placeholder:text-[#C2C2C2] placeholder:font-normal placeholder:font-figtree"
                   placeholder="Enter Your Password"
                 />
                 <button
@@ -169,7 +169,7 @@ const LoginForm = () => {
           <button
             type="button"
             onClick={() => signIn('google')}
-            className="w-full font-sans text-[18px] font-medium flex items-center justify-center gap-3 rounded-md border-[1.5px] border-[#EFEFEF] shadow-sm bg-white py-3 text-[#242424] hover:bg-gray-50 transition-colors"
+            className="w-full font-sans text-[18px] font-medium flex items-center justify-center gap-3 rounded-[8px] border-[1.5px] border-[#EFEFEF] shadow-sm bg-white py-3 text-[#242424] hover:bg-gray-50 transition-colors"
           >
             <svg
               viewBox="0 0 24 24"

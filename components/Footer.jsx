@@ -4,15 +4,15 @@ import logo from '@/public/assets/Logo.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1A1B1E] text-white py-8 sm:py-10 md:py-12 font-sans">
+    <footer className="bg-[#1A1B1E] text-white py-8 sm:py-10 md:py-14 font-sans">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Logo and Social Media Section */}
-          <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-1 text-center lg:text-left mb-8">
+          <div className="col-span-1 sm:col-span-3 md:col-span-6 lg:col-span-1 text-center lg:text-left mb-8">
             <Link href="/" className="inline-flex items-center justify-center">
               <Image src={logo} alt="Dokan-logo" width={32} height={40} />
             </Link>
-            <p className="mt-1 font-normal text-[14px] text-[#606060] text-center lg:text-left">
+            <p className="mt-1 font-normal text-[12px] sm:text-[14px] text-[#606060]">
               Dokan Front End Test
             </p>
 
@@ -60,70 +60,66 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="text-center sm:text-left lg:ms-10">
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/home"
-                  className="hover:text-gray-400 font-normal text-[20px] leading-[32px] text-white transition-colors duration-200"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/features"
-                  className="hover:text-gray-400 font-normal text-[20px] leading-[32px] text-white transition-colors duration-200"
-                >
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/pricing"
-                  className="hover:text-gray-400 font-normal text-[20px] leading-[32px] text-white transition-colors duration-200"
-                >
-                  Pricing
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <ul className="space-y-3 hidden sm:block">
+            <li>
+              <Link
+                href="/home"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/features"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                Features
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/pricing"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                Pricing
+              </Link>
+            </li>
+          </ul>
 
-          <div className="text-center sm:text-left lg:ms-10">
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/about-us"
-                  className="hover:text-gray-400 font-normal text-[20px] leading-[32px] text-white transition-colors duration-200"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/integrations"
-                  className="hover:text-gray-400 font-normal text-[20px] leading-[32px] text-white transition-colors duration-200"
-                >
-                  Integrations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faqs"
-                  className="hover:text-gray-400 font-normal text-[20px] leading-[32px] text-white transition-colors duration-200"
-                >
-                  FAQs
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <ul className="space-y-3 md:block md:text-left lg:text-left sm:text-center sm:me-20 hidden sm:block">
+            <li>
+              <Link
+                href="/about-us"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[15px] lg:text-[18px] text-white transition-colors duration-200"
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/integrations"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                Integrations
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/faqs"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                FAQs
+              </Link>
+            </li>
+          </ul>
 
-          <div className="text-center sm:text-left lg:ms-10">
+          <div className="text-center md:block md:text-left lg:text-left lg:ms-10 hidden sm:block">
             <ul className="space-y-3">
               <li>
                 <Link
                   href="/blog"
-                  className="hover:text-gray-400 font-normal text-[20px] leading-[32px] text-white transition-colors duration-200"
+                  className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
                 >
                   Blog
                 </Link>
@@ -131,7 +127,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/contact-us"
-                  className="hover:text-gray-400 font-normal text-[20px] leading-[32px] text-white transition-colors duration-200"
+                  className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
                 >
                   Contact Us
                 </Link>
@@ -139,7 +135,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/terms"
-                  className="hover:text-gray-400 font-normal text-[20px] leading-[32px] text-white transition-colors duration-200"
+                  className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
                 >
                   Terms & Policies
                 </Link>
@@ -147,15 +143,15 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-1 text-center sm:text-left lg:ms-12">
-            <h3 className="mb-6 font-normal text-[18px] md:text-[20px] leading-[32px] text-center sm:text-left">
+          <div className="hidden sm:block col-span-1 sm:col-span-3 md:col-span-3 lg:col-span-1 lg:text-left text-center sm:text-center lg:ms-12">
+            <h3 className="mb-6 font-normal text-[16px] sm:text-[18px] md:text-[20px] leading-[32px] lg:text-left text-center sm:text-center">
               Our Contact
             </h3>
-            <ul className="space-y-3 flex flex-col items-center sm:items-start">
+            <ul className="space-y-3 lg:text-left md:block md:text-left lg:block flex flex-col items-center sm:items-center">
               <li>
                 <Link
                   href="/contact-us"
-                  className="hover:text-gray-400 text-[18px] font-normal text-[#C2C2C2] inline-flex items-center gap-2 transition-colors duration-200"
+                  className="hover:text-gray-400 text-[12px] sm:text-[14px] md:text-[16px] font-normal text-[#C2C2C2] inline-flex items-center gap-2 transition-colors duration-200"
                 >
                   <svg
                     className="w-4 h-4"
@@ -165,13 +161,15 @@ const Footer = () => {
                   >
                     <path d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z" />
                   </svg>
-                  <span className="ms-1 mt-2">dokan@test.sa</span>
+                  <span className="ms-1 mt-2 md:ms-0 md:mt-0">
+                    dokan@test.sa
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/contact-us"
-                  className="hover:text-gray-400 text-[18px] font-normal text-[#C2C2C2] inline-flex items-center gap-2 transition-colors duration-200"
+                  className="hover:text-gray-400 text-[12px] sm:text-[14px] md:text-[16px] font-normal text-[#C2C2C2] inline-flex items-center gap-2 transition-colors duration-200"
                 >
                   <svg
                     className="w-4 h-4"
@@ -182,13 +180,15 @@ const Footer = () => {
                     <path d="M20.487 15.535c-1.257-.206-2.495-.58-3.65-1.102-.572-.262-1.249-.08-1.667.337l-1.932 1.932c-2.876-1.517-5.225-3.866-6.742-6.742l1.932-1.932c.417-.417.598-1.095.337-1.667-.522-1.154-.896-2.392-1.102-3.65C7.46 2.532 6.875 2 6.207 2H3.514C2.679 2 2 2.679 2 3.514 2 14.962 9.038 22 20.486 22c.835 0 1.514-.679 1.514-1.514v-2.693c0-.668-.532-1.253-1.513-1.258z" />
                   </svg>
 
-                  <span className="ms-1 mt-2">128 Hug x 27 Hug</span>
+                  <span className="ms-1 mt-2 md:ms-0 md:mt-0">
+                    128 Hug x 27 Hug
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="/terms"
-                  className="hover:text-gray-400 text-[18px] font-normal text-[#C2C2C2] inline-flex items-center gap-2 transition-colors duration-200"
+                  className="hover:text-gray-400 text-[12px] sm:text-[14px] md:text-[16px] font-normal text-[#C2C2C2] inline-flex items-center gap-2 transition-colors duration-200"
                 >
                   <svg
                     className="w-4 h-4"
@@ -199,34 +199,178 @@ const Footer = () => {
                     <path d="M12,2C8.13,2,5,5.13,5,9c0,5.25,7,13,7,13s7-7.75,7-13C19,5.13,15.87,2,12,2z M12,11.5c-1.38,0-2.5-1.12-2.5-2.5 s1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5S13.38,11.5,12,11.5z" />
                   </svg>
 
-                  <span className="ms-1 mt-2">Saudi Arabia, Jeddah</span>
+                  <span className="ms-1 mt-2 md:mt-0 md:ms-0">
+                    Saudi Arabia, Jeddah
+                  </span>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 sm:mt-10 md:mt-12 pt-6   text-[#606060]">
+        {/* in small mobiles: */}
+        <div className="flex justify-between items-center sm:hidden ">
+          <div className="ms-3">
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/home"
+                  className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/features"
+                  className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+                >
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pricing"
+                  className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+                >
+                  Pricing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <ul className="space-y-3 me-9">
+            <li>
+              <Link
+                href="/about-us"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/integrations"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                Integrations
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/faqs"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                FAQs
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="flex justify-between  items-center sm:hidden">
+          <ul className="space-y-3 flex flex-col">
+            <h3 className="mb-1 font-normal mt-4 text-[16px] sm:text-[18px] md:text-[20px]">
+              Our Contact
+            </h3>
+            <li>
+              <Link
+                href="/contact-us"
+                className="hover:text-gray-400 text-[12px] sm:text-[14px] md:text-[16px] font-normal text-[#C2C2C2] inline-flex items-center gap-2 transition-colors duration-200"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z" />
+                </svg>
+                <span>dokan@test.sa</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact-us"
+                className="hover:text-gray-400 text-[12px] sm:text-[14px] md:text-[16px] font-normal text-[#C2C2C2] inline-flex items-center gap-2 transition-colors duration-200"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M20.487 15.535c-1.257-.206-2.495-.58-3.65-1.102-.572-.262-1.249-.08-1.667.337l-1.932 1.932c-2.876-1.517-5.225-3.866-6.742-6.742l1.932-1.932c.417-.417.598-1.095.337-1.667-.522-1.154-.896-2.392-1.102-3.65C7.46 2.532 6.875 2 6.207 2H3.514C2.679 2 2 2.679 2 3.514 2 14.962 9.038 22 20.486 22c.835 0 1.514-.679 1.514-1.514v-2.693c0-.668-.532-1.253-1.513-1.258z" />
+                </svg>
+
+                <span>128 Hug x 27 Hug</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/terms"
+                className="hover:text-gray-400 text-[12px] sm:text-[14px] md:text-[16px] font-normal text-[#C2C2C2] inline-flex items-center gap-2 transition-colors duration-200"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M12,2C8.13,2,5,5.13,5,9c0,5.25,7,13,7,13s7-7.75,7-13C19,5.13,15.87,2,12,2z M12,11.5c-1.38,0-2.5-1.12-2.5-2.5 s1.12-2.5,2.5-2.5s2.5,1.12,2.5,2.5S13.38,11.5,12,11.5z" />
+                </svg>
+                <span>Saudi Arabia, Jeddah</span>
+              </Link>
+            </li>
+          </ul>
+          <ul className="space-y-3">
+            <li>
+              <Link
+                href="/blog"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact-us"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/terms"
+                className="hover:text-gray-400 font-normal text-[14px] sm:text-[16px] md:text-[18px] text-white transition-colors duration-200"
+              >
+                Terms & Policies
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="mt-8 sm:mt-10 md:mt-12 pt-14   text-[#606060]">
           <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-4">
-            <p className="text-center sm:text-left font-normal text-[14px] sm:text-[16px] leading-[20px]">
+            <p className="text-center sm:text-left font-normal text-[12px] sm:text-[14px] text-[#606060]">
               © 2025 Dokan Inc. All rights reserved.
             </p>
-            <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8">
+            <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-4">
               <Link
                 href="/privacy"
-                className="hover:text-white transition-colors duration-200 font-normal text-[16px] leading-[20px] whitespace-nowrap"
+                className="hover:text-white transition-colors duration-200 font-normal text-[12px] sm:text-[14px] md:text-[16px]"
               >
                 Privacy policy
               </Link>
               <Link
                 href="/gdpr"
-                className="hover:text-white transition-colors duration-200 font-normal text-[16px] leading-[20px] whitespace-nowrap"
+                className="hover:text-white transition-colors duration-200 font-normal text-[12px] sm:text-[14px] md:text-[16px]"
               >
                 GDPR
               </Link>
               <Link
                 href="/terms"
-                className="hover:text-white transition-colors duration-200 font-normal text-[16px] leading-[20px] whitespace-nowrap"
+                className="hover:text-white transition-colors duration-200 font-normal text-[12px] sm:text-[14px] md:text-[16px]"
               >
                 Terms of service
               </Link>
